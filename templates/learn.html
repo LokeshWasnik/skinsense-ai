@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,500,700|Poppins:300,400,500,600,700" rel="stylesheet">
+  <style>
+    .hero-learn {
+      background: linear-gradient(90deg, #009961 0%, #00b371 100%);
+      color: #fff;
+      padding: 60px 0 40px 0;
+      text-align: center;
+      border-radius: 0 0 32px 32px;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 24px rgba(0,153,97,0.10);
+    }
+    .hero-learn h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+    .hero-learn p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    .card-learn {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      padding: 32px 28px;
+      margin: 0 auto 32px auto;
+      max-width: 700px;
+      animation: fadeInUp 0.7s cubic-bezier(.39,.575,.56,1.000) both;
+    }
+    .section-title-learn {
+      color: #009961;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero-learn">
+    <h1>Learn About Skin Cancer</h1>
+    <p>Empowering you with knowledge for early detection and prevention</p>
+  </div>
+  <div class="card-learn">
+    <div class="section-title-learn">What is Skin Cancer?</div>
+    <p>Skin cancer is the out-of-control growth of abnormal cells in the epidermis, the outermost skin layer, caused by unrepaired DNA damage that triggers mutations. These mutations lead the skin cells to multiply rapidly and form malignant tumors. The main types of skin cancer are basal cell carcinoma (BCC), squamous cell carcinoma (SCC), and melanoma.</p>
+  </div>
+  <div class="card-learn">
+    <div class="section-title-learn">Prevention Tips</div>
+    <ul>
+      <li>Seek shade, especially between 10 AM and 4 PM.</li>
+      <li>Wear protective clothing, hats, and sunglasses.</li>
+      <li>Use broad-spectrum sunscreen with SPF 30+ daily.</li>
+      <li>Avoid tanning beds and intentional sunburns.</li>
+      <li>Examine your skin monthly for new or changing spots.</li>
+      <li>See a dermatologist annually for a professional skin exam.</li>
+    </ul>
+  </div>
+  <div class="card-learn">
+    <div class="section-title-learn">Early Detection</div>
+    <p>Early detection saves lives. Learn the ABCDEs of melanoma: <br>
+      <b>A</b>symmetry, <b>B</b>order irregularity, <b>C</b>olor variation, <b>D</b>iameter &gt;6mm, <b>E</b>volving shape/size.</p>
+  </div>
+  <!-- Botpress Webchat Integration -->
+  <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js" defer></script>
+  <script src="https://files.bpcontent.cloud/2025/07/27/03/20250727032034-LU2VUI2U.js" defer></script>
+</body>
+</html>
