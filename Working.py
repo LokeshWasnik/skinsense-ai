@@ -87,7 +87,8 @@ else:
 # -------------------- LOAD MODEL --------------------
 model = load_model(model_path)
 
-# -------------------- CLASS LABELS --------------------
+
+# -------------------- CLASS LABELS & INFO --------------------
 cancer_classes = {
     0: 'Actinic keratoses and intraepithelial carcinomae',
     1: 'Basal Cell Carcinoma',
@@ -96,6 +97,16 @@ cancer_classes = {
     4: 'Melanocytic Nevus',
     5: 'Vascular Lesion',
     6: 'Melanoma',
+}
+
+cancer_info = {
+    'Actinic keratoses and intraepithelial carcinomae': "Precancerous, rough, scaly patches on sun-exposed skin. Early treatment can prevent progression to squamous cell carcinoma.",
+    'Basal Cell Carcinoma': "The most common skin cancer. Grows slowly and rarely spreads, but can cause local damage if untreated.",
+    'Benign Keratosis': "Non-cancerous skin growths, often appearing as warty or waxy spots. Generally harmless but can resemble skin cancer.",
+    'Dermatofibroma': "A benign, firm bump often found on the legs. Not dangerous and usually does not require treatment.",
+    'Melanocytic Nevus': "Commonly known as a mole. Most are harmless, but changes in size, color, or shape should be checked by a doctor.",
+    'Vascular Lesion': "Abnormal blood vessels in the skin, usually benign. Some types may require monitoring or treatment.",
+    'Melanoma': "A serious form of skin cancer that can spread rapidly. Early detection and treatment are critical for a good outcome. See a dermatologist promptly if suspected.",
 }
 
 # -------------------- FLASK ROUTES --------------------
@@ -121,12 +132,13 @@ def classify_image():
         prediction = model.predict(img)
         pred_class = np.argmax(prediction)
         label = cancer_classes.get(pred_class, "Unknown")
+        info = cancer_info.get(label, "No additional information available.")
 
         # Optional: auto-delete uploaded image after prediction
         # time.sleep(2)
         # os.remove(filepath)
 
-        return render_template('forms/q2_new.html', filename=filename, diagnosis=label)
+        return render_template('forms/q2_new.html', filename=filename, diagnosis=label, cancer_info=info)
     return render_template('forms/q2_new.html')
 
 @app.route('/index/<filename>')
