@@ -1,15 +1,8 @@
-# Core dependencies
-Flask
-flask-wtf
-wtforms
-
-# ML/Scientific
-numpy
-tensorflow
-pandas
-
-# For testing
-unittest
-
-# If you use Pillow for image processing, uncomment below
- pillow
+Flask==3.0.3
+flask-wtf==1.2.1
+wtforms==3.1.2
+numpy==1.26.4
+tensorflow==2.15.0
+pandas==2.2.2
+Pillow==10.4.0
+gunicorn==21.2.0
