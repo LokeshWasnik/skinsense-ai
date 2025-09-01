@@ -1,0 +1,15 @@
+# Core dependencies
+Flask
+flask-wtf
+wtforms
+
+# ML/Scientific
+numpy
+tensorflow
+pandas
+
+# For testing
+unittest
+
+# If you use Pillow for image processing, uncomment below
+ pillow
