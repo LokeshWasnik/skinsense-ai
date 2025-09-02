@@ -153,12 +153,16 @@ def learn():
 def try_now():
     return redirect(url_for('classify_image'))
 
-# -------------------- RUN FLASK APP --------------------
+    # -------------------- RUN FLASK APP --------------------
 if __name__ == '__main__':
-    print("Flask app is starting on http://localhost:2500")
-    import webbrowser
-    import os
-    # Only open browser if not running in the Flask reloader subprocess
+    port = int(os.environ.get("PORT", 2500))  # Railway gives PORT, fallback to 2500 locally
+    print(f"Flask app is starting on http://localhost:{port}")
+
+    # Only open browser locally (not on Railway/Gunicorn)
     if os.environ.get('WERKZEUG_RUN_MAIN') == 'true':
-        webbrowser.open("http://localhost:2500")
-    app.run(host='0.0.0.0', port=2500, debug=True)
+        import webbrowser
+        webbrowser.open(f"http://localhost:{port}")
+
+    app.run(host='0.0.0.0', port=port, debug=True)
+
+
