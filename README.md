@@ -47,7 +47,7 @@ SkinSense AI is a web application designed to help users detect and classify ski
 	python _updated/run.py
 	```
 4. **Open your browser:**
-	Visit `http://localhost:5000` to use the app.
+	Visit `http://localhost:2500` to use the app.
 
 ## Deployment
 You can deploy this app for free on platforms like Render.com, Railway, or Replit. Make sure to include your `requirements.txt` (if using Render/Heroku-style deployment).
