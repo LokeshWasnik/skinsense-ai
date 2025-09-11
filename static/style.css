@@ -10,7 +10,6 @@
 # General
 --------------------------------------------------------------*/
 body {
-  margin: 50px
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
@@ -196,7 +195,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
-* Desktop Navigation
+* Desktop Navigation 
 */
 .navbar {
   padding: 0;
@@ -336,7 +335,7 @@ h6 {
 }
 
 /**
-* Mobile Navigation
+* Mobile Navigation 
 */
 .mobile-nav-toggle {
   color: #fff;
@@ -448,15 +447,14 @@ h6 {
 
 /*--------------------------------------------------------------
 # Hero Section
-
+--------------------------------------------------------------*/
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("{{ url_for('static',filename='image/hero-bg.jpg') }}") top center;
+  background: url("../img/hero-bg.jpg") top center;
   background-size: cover;
   position: relative;
 }
---------------------------------------------------------------*/
 
 #hero:before {
   content: "";
@@ -1189,7 +1187,9 @@ section {
 # Faq
 --------------------------------------------------------------*/
 .faq {
-  padding: 0;
+  background: url("../img/faq-bg.jpg") center center no-repeat;
+  background-size: cover;
+  padding: 80px 0;
 }
 
 .faq .content {
@@ -1294,17 +1294,17 @@ section {
 
 @media (max-width: 992px) {
   .faq {
-    /* img {
-      padding-top: 30px;
-    } */
+     img {
+      padding-top: 0px;
+    } 
   }
 
   .faq .content {
-    padding-top: 30px;
+    padding-top: 0px;
   }
 
   .faq .accordion-list {
-    padding-bottom: 30px;
+    padding-bottom: 0px;
   }
 }
 
@@ -1486,7 +1486,8 @@ section {
   color: #fff;
   font-size: 14px;
   text-align: center;
-  padding: 30px 0;
+  padding: 
+0px 0;
 }
 
 #footer h3 {
